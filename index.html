@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>WONDER FLOWERS | The Architecture of Bloom</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,300;0,400;0,700;1,300&amp;family=Manrope:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "outline-variant": "#4d4635",
+                        "on-surface-variant": "#d0c5af",
+                        "secondary-container": "#50462a",
+                        "surface-container-highest": "#353534",
+                        "surface-bright": "#393939",
+                        "surface-container-lowest": "#0e0e0e",
+                        "primary-container": "#d4af37",
+                        "surface-dim": "#131313",
+                        "inverse-surface": "#e5e2e1",
+                        "error-container": "#93000a",
+                        "secondary-fixed-dim": "#d5c5a1",
+                        "primary-fixed": "#ffe088",
+                        "outline": "#99907c",
+                        "surface-variant": "#353534",
+                        "primary-fixed-dim": "#e9c349",
+                        "error": "#ffb4ab",
+                        "background": "#131313",
+                        "on-error": "#690005",
+                        "primary": "#f2ca50",
+                        "on-tertiary": "#313030",
+                        "tertiary-fixed-dim": "#c8c6c5",
+                        "on-surface": "#e5e2e1",
+                        "on-primary-fixed-variant": "#574500",
+                        "on-error-container": "#ffdad6",
+                        "surface-container-high": "#2a2a2a",
+                        "surface": "#131313",
+                        "surface-container": "#201f1f",
+                        "tertiary-fixed": "#e5e2e1",
+                        "on-primary": "#3c2f00",
+                        "on-primary-fixed": "#241a00",
+                        "inverse-on-surface": "#313030",
+                        "on-tertiary-fixed": "#1c1b1b",
+                        "on-secondary": "#392f16",
+                        "on-secondary-fixed-variant": "#50462a",
+                        "surface-tint": "#e9c349",
+                        "on-primary-container": "#554300",
+                        "on-background": "#e5e2e1",
+                        "tertiary-container": "#b4b2b2",
+                        "secondary-fixed": "#f2e1bb",
+                        "on-tertiary-container": "#454544",
+                        "tertiary": "#d0cdcd",
+                        "surface-container-low": "#1c1b1b",
+                        "on-tertiary-fixed-variant": "#474746",
+                        "on-secondary-fixed": "#231b04",
+                        "on-secondary-container": "#c3b491",
+                        "secondary": "#d5c5a1",
+                        "inverse-primary": "#735c00"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0px",
+                        "lg": "0px",
+                        "xl": "0px",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "container-max": "1440px",
+                        "gutter": "24px",
+                        "section-gap": "128px",
+                        "unit": "8px",
+                        "margin-edge": "64px"
+                    },
+                    "fontFamily": {
+                        "button": ["manrope"],
+                        "label-caps": ["manrope"],
+                        "body-lg": ["manrope"],
+                        "headline-lg": ["Noto Serif"],
+                        "display-xl": ["Noto Serif"],
+                        "headline-md": ["Noto Serif"],
+                        "body-md": ["manrope"]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            background-color: #121212;
+            color: #e5e2e1;
+            scroll-behavior: smooth;
+            scroll-snap-type: y proximity;
+        }
+        .chiero-shadow {
+            box-shadow: inset 0 0 150px 50px rgba(0,0,0,0.9);
+        }
+        .gold-border-hover {
+            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .gold-border-hover:hover {
+            border-color: #D4AF37;
+            box-shadow: 0 0 15px rgba(212, 175, 55, 0.2);
+        }
+    </style>
+</head>
+<body class="font-body-md antialiased overflow-x-hidden">
+<!-- TopAppBar -->
+<header class="bg-[#121212] flex justify-between items-center w-full px-4 sm:px-8 md:px-16 py-8 max-w-[1440px] mx-auto docked full-width top-0 border-b border-[#D4AF37]/30 z-50 sticky">
+<div class="text-2xl font-light tracking-[0.3em] text-white font-['Noto_Serif']">WONDER FLOWERS</div>
+<nav class="hidden md:flex gap-12">
+<a class="font-['Noto_Serif'] uppercase tracking-[0.2em] text-sm text-[#D4AF37] border-b border-[#D4AF37] pb-1 hover:text-[#D4AF37] transition-all duration-500 ease-in-out" href="#product-catalog">SHOP</a>
+<a class="font-['Noto_Serif'] uppercase tracking-[0.2em] text-sm text-white/70 hover:text-[#D4AF37] transition-all duration-500 ease-in-out" href="#gift-vault">GIFT VAULT</a>
+<a class="font-['Noto_Serif'] uppercase tracking-[0.2em] text-sm text-white/70 hover:text-[#D4AF37] transition-all duration-500 ease-in-out" href="#wonder-experience">EXPERIENCE</a>
+<a class="font-['Noto_Serif'] uppercase tracking-[0.2em] text-sm text-white/70 hover:text-[#D4AF37] transition-all duration-500 ease-in-out" href="#concierge">CONCIERGE</a>
+</nav>
+<div class="flex items-center gap-6">
+<button id="hamburger" class="md:hidden material-symbols-outlined text-white hover:text-[#D4AF37] transition-colors">menu</button>
+<button class="material-symbols-outlined text-white hover:text-[#D4AF37] transition-colors">shopping_bag</button>
+<button class="material-symbols-outlined text-white hover:text-[#D4AF37] transition-colors">person</button>
+</div>
+</header>
+</header>
+<div id="scroll-progress-bar" style="height: 4px; background: linear-gradient(90deg, #D4AF37 0%, #f2ca50 100%); width: 0%; transition: width 0.2s cubic-bezier(0.4,0,0.2,1); position: sticky; top: 88px; margin-top: 16px; z-index: 49;"></div>
+</header>
+<main class="max-w-[1440px] mx-auto">
+<!-- Hero Section -->
+<section id="hero" class="relative min-h-screen flex items-center px-4 sm:px-8 md:px-16 overflow-hidden opacity-0 translate-y-10 transition-all duration-1000" style="scroll-snap-align: start;">
+<div class="absolute inset-0 z-0">
+<img class="w-full h-full object-cover filter brightness-[0.6]" data-alt="A macro studio photograph of a deep crimson rose and golden orchids emerging from total darkness. The lighting is dramatic chiaroscuro style, with sharp highlights catching the velvet texture of the petals and deep, ink-black shadows consuming the background. The mood is highly editorial, expensive, and mysterious, reflecting the luxury Floral Noir aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCVlgpWv38RlNT2ECr667tDjXTisYSIWe1PPle6eEy_-GD_HZpaUHRytqOS-4TbkWHoW604UKl52-ao69TO6A0aVmZM0nA4tVJHL_kwBzAzIrNLLM9jf9ADgboX4WhPwvdkLfcuSoNru_aMGtT56HaLrbrBRSo2JTwGCEX2m6TnPBRuXrlrJgK2p3AZ_KR7AvmPgLtjKT0OsHegjIyA5uS4SWlD2FQgDjrXhgZrNsf3vTZtV52g_YWinyfn06PXD_noKRONguVrk5Kn"/>
+<div class="absolute inset-0 bg-gradient-to-r from-[#121212] via-transparent to-[#121212]/30"></div>
+</div>
+<div class="relative z-10 w-full">
+<p class="font-label-caps text-primary mb-6 tracking-[0.4em]">HAUTE BOTANIQUE</p>
+<h1 class="font-display-xl text-primary leading-tight max-w-4xl italic">
+                    THE <span class="not-italic">ARCHITECTURE</span> <br/>
+<span class="ml-24">OF BLOOM</span>
+</h1>
+<div class="mt-12 flex items-center gap-8">
+<button class="bg-primary-container text-on-primary px-10 py-4 font-button tracking-widest text-xs uppercase hover:bg-primary transition-all">
+                        EXPLORE THE COLLECTION
+                    </button>
+<div class="h-[1px] w-32 bg-primary/40"></div>
+</div>
+</div>
+</section>
+<!-- Gift Vault: Colección Limitada -->
+<section id="gift-vault" class="py-32 px-4 sm:px-8 md:px-16 bg-surface-container-lowest border-y border-outline-variant/10 opacity-0 translate-y-10 transition-all duration-1000" style="scroll-snap-align: start;">
+<div class="flex flex-col md:flex-row justify-between items-end mb-20">
+<div class="max-w-2xl">
+<h2 class="font-headline-lg text-white mb-4">GIFT VAULT</h2>
+<p class="font-label-caps text-secondary mb-8">COLECCIÓN LIMITADA: 8 DE MARZO</p>
+<p class="font-body-lg text-on-surface-variant italic leading-relaxed">
+                        "Para quien merece el oro: Diseños que trascienden."
+                    </p>
+</div>
+<button class="font-button text-primary border-b border-primary pb-1 mb-2 hover:opacity-70 transition-opacity">VIEW ALL LIMITED EDITIONS</button>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12">
+<!-- Card 1 -->
+<div class="group border border-outline-variant/30 p-8 gold-border-hover relative">
+<div class="aspect-[3/4] mb-8 overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="A minimalist product shot of a single gold-dipped rose preserved in a black glass case. The lighting is focused and warm, creating a glow around the metallic edges of the flower. The background is a clean matte black, emphasizing the luxury and permanence of the gift from the Wonder Flowers collection." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDpzC30Ip8CC54ra_XuGV6MqRYCXrHkzpJXHaw6LHOYm9RJGFek0vCH7U4m8sj7fCZ6Vp8L7WeBSjqwBjBGYJ0PsiaoIUZJhSHcEZDF8U-P46BYkxQxpMF4HO0H3jUxhLvhqyE5EsZIOnUAqsZbZLmcLj2Jym8akHc6RISnPsd67chgLXp8o49nwURuQWW8Rx-kQ_SgKe8hSKseVPfmRdgzfmYvq9I2c_eK9QE0N8O6KZrTjrL2zyz06jJfe51N8ZNmEGdPBmTMOylx"/>
+</div>
+<h3 class="font-headline-md text-white text-xl mb-2">AUREUM NO. I</h3>
+<p class="font-body-md text-on-surface-variant/60 mb-6">Gold-Infused Eternity Rose</p>
+<p class="text-primary font-body-lg">$420.00</p>
+<div class="absolute top-4 right-4 text-[10px] tracking-widest text-primary border border-primary px-2 py-1">LIMITED</div>
+</div>
+<!-- Card 2 (Asymmetrical offset) -->
+<div class="group border border-outline-variant/30 p-8 gold-border-hover relative md:-mt-12 bg-surface">
+<div class="aspect-[3/4] mb-8 overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="A large, symmetrical bouquet of rare black calla lilies wrapped in heavy gold-foiled architectural paper. The lilies have a velvet-like sheen under the spotlight, and the overall composition is sophisticated and dramatic, set against a dark, minimalist interior." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCRWDS1RAvu8ZtBFQ9qcywkuxIqznJjAyiswjEXY8asmVg_KThHLTNkSo0tIj_ZCdsOg5_nb0461JDPsclywGk-hYK3_MFy_EaK4C6Th2HYktO2A675Esc5ZnHwtoVjubg5aHSe9kc-_w7uIZsOMm5dCHyKYko7kw9IkXA_lwgVVTV-zH9UdrfAuf5pq1BtCZlFCHseS0rfQ8_xMyDpWi2DmG6JYPWzUltgRd0Ts3SrdHXARNGBiLT4V8q_9j3HNapb2gHokaQu6vV8"/>
+</div>
+<h3 class="font-headline-md text-white text-xl mb-2">NOIR ET OR</h3>
+<p class="font-body-md text-on-surface-variant/60 mb-6">Black Calla Lily &amp; Gold Leaf</p>
+<p class="text-primary font-body-lg">$580.00</p>
+<div class="absolute top-4 right-4 text-[10px] tracking-widest text-primary border border-primary px-2 py-1">LIMITED</div>
+</div>
+<!-- Card 3 -->
+<div class="group border border-outline-variant/30 p-8 gold-border-hover relative">
+<div class="aspect-[3/4] mb-8 overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="A curated collection of exotic white orchids arranged in a matte black ceramic vessel with gold hairline details. The orchids are pristine and architectural, with soft directional lighting creating elegant shadows on a dark mahogany surface." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBuEVrwh67yGIZrDySIZV1hWlsB03MX70C7Oyccc1yVnPsnh8XfH7ZJZhxE8MURNlPvYzz7q2FnUBVpm9wq0lImvca82I6ogCzQQ1PyAqZTuuuMHHGyuBnI_XWbYq5N2srhgZo3B3emdKMUlPsS9IyD0-0X2Vqjty8M1TJ5WAbCo_-1j3vha44J5E7DWi4itJtXCLsTyiUxaqqpmFpl9Padhx5YPIZXk4xdLbeGHEH_aAD4EoAOeHYjs9gR1tvvc_LOmpz5_0wvppuc"/>
+</div>
+<h3 class="font-headline-md text-white text-xl mb-2">IMPERIAL ALBA</h3>
+<p class="font-body-md text-on-surface-variant/60 mb-6">Pristine White Imperial Orchids</p>
+<p class="text-primary font-body-lg">$395.00</p>
+<div class="absolute top-4 right-4 text-[10px] tracking-widest text-primary border border-primary px-2 py-1">LIMITED</div>
+</div>
+</div>
+</section>
+<!-- Product Catalog -->
+<section id="product-catalog" class="py-32 px-4 sm:px-8 md:px-16 space-y-32 opacity-0 translate-y-10 transition-all duration-1000" style="scroll-snap-align: start;">
+<!-- Category 1 -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-24 items-center">
+<div class="order-2 md:order-1">
+<h4 class="font-label-caps text-primary tracking-[0.5em] mb-4">CATEGORÍA I</h4>
+<h2 class="font-display-xl text-white mb-8">RAMOS DE <br/>AUTOR</h2>
+<p class="font-body-lg text-on-surface-variant mb-12 max-w-md leading-loose">
+                        Sculptural arrangements where each stem is chosen for its symbolic weight. A dialogue between nature and artifice.
+                    </p>
+<div class="space-y-4 border-l border-primary/30 pl-8">
+<div class="flex justify-between items-center text-sm tracking-widest border-b border-outline-variant/10 pb-4 hover:border-primary transition-colors cursor-pointer">
+<span>THE POET'S GARDEN</span>
+<span class="text-primary">EXPLORE</span>
+</div>
+<div class="flex justify-between items-center text-sm tracking-widest border-b border-outline-variant/10 pb-4 hover:border-primary transition-colors cursor-pointer">
+<span>MIDNIGHT SONNET</span>
+<span class="text-primary">EXPLORE</span>
+</div>
+</div>
+</div>
+<div class="order-1 md:order-2 h-[600px] bg-surface-container overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="An avant-garde floral arrangement featuring asymmetric branches, rare deep purple peonies, and structural green foliage. The arrangement is showcased in a dramatic side-lit environment, emphasizing its sculptural form and the high-end editorial photography style of a luxury florist." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCCr3fmFPW0r6qWzUiwpXriCUuN6sCTf8x-U8ktm6k17yVtM1P5Encu9tGqJmcQhlpZ-HyRR_xrFCXBYbKA0u3dEQ8zSWngm1CKmLCVb4xYUy3Ugu8Ijb7tchwI4ZC3nnZBvz3u0rL9wnZxt_w84_DxuKH3STJ2FU6dSGa-Ah-sZotTP9P9UsVlc8h7qWDyu5RReEXOBvcGF8_U_3_rns7rgGpuUM141Yul0NblBpHPpctrrIDVNGCAk_lkv2qJgv8XOxlE0VCGG_uJ"/>
+</div>
+</div>
+<!-- Category 2 -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-24 items-center">
+<div class="h-[600px] bg-surface-container overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="A stack of luxurious matte black floral boxes tied with thick gold silk ribbons. One box is slightly open, revealing a glimpse of soft white silk tissue paper and the vibrant heads of perfectly uniform red roses. The atmosphere is one of exclusivity, mystery, and high-fashion gifting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCbtjMFskDnHOpclVaQWKiM47CHLGyQT067O1LHXJGUcGi8N0hL07KIa-p5seS_hUka5Hg94qJgDneIOXv-VJ2bLH-W86OQJ1JXdVN8HDk2_S1vFHiBSgy-dUlW09T6H5zPrbBYLeNt0YAg0jh0XPGp14oZaAA0Mm6utkBXSyrknizAdCClhT4qe48cM7sF1M_Cfn4j6FPnL00OG4AyATBz8xayWLf4U-9lGMq9HbBG6qH_qaSwq_LDEKnd7kHOfH0ZOPVjmXH-DOeo"/>
+</div>
+<div class="md:pl-16">
+<h4 class="font-label-caps text-primary tracking-[0.5em] mb-4">CATEGORÍA II</h4>
+<h2 class="font-display-xl text-white mb-8">CAJAS DE <br/>TERCIOPELO</h2>
+<p class="font-body-lg text-on-surface-variant mb-12 max-w-md leading-loose">
+                        Encased in darkness, preserved in time. Our signature velvet series offers a tactile journey into the heart of the bloom.
+                    </p>
+<button class="border border-primary text-primary px-12 py-5 font-button hover:bg-primary/10 transition-all">DISCOVER THE TEXTURE</button>
+</div>
+</div>
+<!-- Category 3 -->
+<div class="flex flex-col items-center text-center">
+<h4 class="font-label-caps text-primary tracking-[0.5em] mb-4">CATEGORÍA III</h4>
+<h2 class="font-display-xl text-white mb-16">ORQUÍDEAS IMPERIALES</h2>
+<div class="w-full grid grid-cols-1 md:grid-cols-4 gap-4 md:gap-8 h-[400px] md:h-[500px]">
+<div class="col-span-2 overflow-hidden">
+<img class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-1000" data-alt="A close-up view of a rare blue orchid with iridescent petals, shimmering under a soft cool-toned light against a dark, moody background. The details of the orchid's delicate structure are highly visible, suggesting rare botanical specimens." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB5bU8WMPVLWZWbIQNU92XmBiZmFhEBW3Px5enDi4cW5qMoGp_w8l7vtydAxe4SHfrF8uKFjOfWNdW-BEKDeoa9rtWNo4SGAaYgE0QafsBq_TdKjal2gZN7b3bVo67nqqZaOVRfmNVcCfuiynCRJaJq020hQMzXxY7tR49TrFyvrKiX8YF0GVP5jq3ez4fnjhOVqRwsnIcVU9Slo1VlwciTHl7VhBDiv9gN0nmlY5oDHWH4PtWEzHSFWniDU8X7hYqEHPb5KmBGzHjo"/>
+</div>
+<div class="overflow-hidden">
+<img class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-1000" data-alt="A detailed shot of white Phalaenopsis orchids in a tall glass vase, reflected in a dark polished marble table. The setting is a luxury hotel lobby at night, lit by warm ambient lighting that creates long, elegant shadows." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAMDalDzjdbygIxlLbfAiAkPJZPsJraU7Wh599_LQU8SfuFXDZUmmFbNCGqe_e-KrGK8w7Gk06hz_mvRmh_AS0CYYOt_H1aICCxg4CG9ERE-l2D3PV7bPXMn5-wKyUobwY-ynKILMmKxMSkwY3jUcDZQQG4pdc0NcL5J_au6l5y0QmlyrenrrkcgrILqNuuoTnk_NRT3qO--VmockjEarnubeeqO4iWz7V9jMI1B3HpEAoWFhYsoeN79JLfyQcqaXy1TgFhz_SafsTX"/>
+</div>
+<div class="overflow-hidden">
+<img class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-1000" data-alt="A rare black orchid specimen, its petals deep velvet obsidian with tiny golden pollen grains. The flower is captured in a minimalist botanical illustration style, but as a photograph with deep blacks and sharp focus." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDeX-dyvmh-XaVRMIcNJIS9Fn_aB_B3Lw1DKdm9ZCdlNSb97BGCRzUUpeZW0emtN1yBgklg2Ka6qhHcO5fus4vv8uQQuWLWy_EqoeVkLJgawaWw_E3To_s8imcUGZtFZyMczIVRNBhGZxPkhtQoh9jg2nujr2AgOn8sMmwM0lTBbiCtixiu8btZ9vPazATOd4CBlOsgKJcnTEajtNUek8KmoA4mvU1Ya_zkOLCqJf04y-veXVTK18ceMNSSGfrVymV9n2o6IdqCInBm"/>
+</div>
+</div>
+<p class="mt-12 font-body-md text-secondary tracking-widest uppercase text-xs">Exotic Specimens • Climate Controlled Delivery • Eternal Bloom</p>
+</div>
+</section>
+<!-- Wonder Experience -->
+<section id="wonder-experience" class="py-32 px-4 sm:px-8 md:px-16 bg-[#0a0a0a] opacity-0 translate-y-10 transition-all duration-1000" style="scroll-snap-align: start;">
+<div class="max-w-5xl mx-auto border-t border-b border-primary/20 py-24 flex flex-col md:flex-row gap-12 md:gap-20">
+<div class="flex-1">
+<h3 class="font-headline-lg text-white mb-8">WONDER EXPERIENCE</h3>
+<p class="font-body-lg text-on-surface-variant mb-12">Beyond the bloom, we curate the ritual. Every Wonder Flowers arrangement arrives as a complete sensory experience, designed to be remembered.</p>
+<div class="space-y-12">
+<div class="flex gap-6 items-start">
+<span class="material-symbols-outlined text-primary text-3xl">inventory_2</span>
+<div>
+<h5 class="font-label-caps text-white mb-2">ARCHITECTURAL PACKAGING</h5>
+<p class="text-sm text-on-surface-variant/70">Choose between our signature Matte Black Obsidian Box or the delicate White Silk Paper wrap with hand-pressed wax seals.</p>
+</div>
+</div>
+<div class="flex gap-6 items-start">
+<span class="material-symbols-outlined text-primary text-3xl">history_edu</span>
+<div>
+<h5 class="font-label-caps text-white mb-2">DIGITAL CALLIGRAPHY</h5>
+<p class="text-sm text-on-surface-variant/70">Personalize your message with hand-inscribed digital calligraphy, printed on premium 300gsm champagne cardstock.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="flex-1 relative">
+<div class="absolute -top-10 -left-10 w-full h-full border border-primary/10"></div>
+<img class="relative z-10 w-full h-full object-cover" data-alt="A cinematic overhead shot of a person wearing black silk gloves carefully tying a golden ribbon around a luxurious gift box. Beside the box is a calligraphy pen and a handwritten note on textured paper. The scene is illuminated by soft, warm light from the side, creating a high-end, bespoke artisanal feel." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCX-csXQYqt7xs-6Kzv2gMUm5UPZmewhq3hfDA52P_pDUjfyD26YN8F4U7PRXBzc5JsEt_c0UdpURRo3q85urZgoulwQJSyJ87LVzNNmh5S0lwL1mVVAtb9dn9QlpsmlR74utFX8xGsmeeoNARPFY2WITA6NA1HSr6CyevVTTrjLGgaoBuIBvnMyfrt1KlS-d0mFn9qOy-ZHXZ8dfaGj7zYiEco9gJvQfMwStFF8dNHlEn_7kK8e2D4cfGG969RQjUkKNmvKzO-H8FK"/>
+</div>
+</div>
+</section>
+<!-- Concierge Service -->
+<section id="concierge" class="py-32 px-4 sm:px-8 md:px-16 bg-surface opacity-0 translate-y-10 transition-all duration-1000" style="scroll-snap-align: start;">
+<div class="max-w-4xl mx-auto text-center mb-20">
+<h2 class="font-headline-lg text-white mb-6">ASESORÍA FLORAL PERSONALIZADA</h2>
+<p class="font-body-lg text-on-surface-variant italic">Let our curators design a moment specifically for you.</p>
+</div>
+<form class="max-w-2xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
+<div class="relative">
+<input class="w-full bg-transparent border-0 border-b border-[#E5D5B0] py-4 px-0 text-white focus:ring-0 focus:border-primary peer" placeholder=" " type="text"/>
+<label class="absolute left-0 top-4 font-label-caps text-[10px] text-secondary uppercase transition-all peer-placeholder-shown:text-base peer-placeholder-shown:top-4 peer-focus:-top-4 peer-focus:text-[10px]">Your Name</label>
+</div>
+<div class="relative">
+<input class="w-full bg-transparent border-0 border-b border-[#E5D5B0] py-4 px-0 text-white focus:ring-0 focus:border-primary peer" placeholder=" " type="email"/>
+<label class="absolute left-0 top-4 font-label-caps text-[10px] text-secondary uppercase transition-all peer-placeholder-shown:text-base peer-placeholder-shown:top-4 peer-focus:-top-4 peer-focus:text-[10px]">Email Address</label>
+</div>
+<div class="relative md:col-span-2">
+<input class="w-full bg-transparent border-0 border-b border-[#E5D5B0] py-4 px-0 text-white focus:ring-0 focus:border-primary peer" placeholder=" " type="text"/>
+<label class="absolute left-0 top-4 font-label-caps text-[10px] text-secondary uppercase transition-all peer-placeholder-shown:text-base peer-placeholder-shown:top-4 peer-focus:-top-4 peer-focus:text-[10px]">Desired Aesthetic / Occasion</label>
+</div>
+<div class="md:col-span-2 flex justify-between items-center mt-8">
+<button class="bg-primary-container text-on-primary px-16 py-4 font-button tracking-widest text-xs uppercase hover:opacity-90" type="submit">
+                        REQUEST CONSULTATION
+                    </button>
+<a class="flex items-center gap-3 text-primary font-button text-xs tracking-widest hover:opacity-70" href="#">
+<img alt="WhatsApp Icon" class="w-5 h-5 opacity-70 contrast-150 filter grayscale invert" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCwlPCmPQJK20G0q-xJV87GCNiTRnq6tk0MErGfbPXI_SBRVz86sVEW12wyiEtgh0sNyRt_IBEQYCoKGSbml0McQjKhdGrqI2RHWxzeSl8Rr5vHb16kaG6iH8sdbvPgG0mRgOE2t228rOZW5uDvppQG_hFcwDzYhzqOsMni8YPVHQvaM9i78u5mxx6XbTAeIq2JZHYErYqLNQkXrzEzjcubvx5fqI3lt6kR-DcyTMwSyMF1Y6h8FZP_lZv-t1rixEQf27Ogwl1csTfX"/>
+                        WHATSAPP DIRECT
+                    </a>
+</div>
+</form>
+</section>
+</main>
+<!-- Footer -->
+<footer id="footer" class="bg-[#121212] border-t border-[#D4AF37]/20">
+<div class="flex flex-col md:flex-row justify-between items-center w-full px-4 sm:px-8 md:px-16 py-20 max-w-[1440px] mx-auto gap-8">
+<div class="flex flex-col items-center md:items-start">
+<div class="text-3xl md:text-5xl font-light tracking-[0.4em] text-[#D4AF37] font-['Noto_Serif'] mb-4 drop-shadow-[0_0_10px_rgba(212,175,55,0.3)]">WONDER FLOWERS</div>
+<p class="font-['Noto_Serif'] uppercase tracking-widest text-[10px] text-white/50">© 2024 WONDER FLOWERS. ALL RIGHTS RESERVED.</p>
+</div>
+<div class="flex flex-wrap justify-center gap-8 md:gap-12">
+<a class="font-['Noto_Serif'] uppercase tracking-widest text-[10px] text-white/50 hover:text-white transition-colors duration-300" href="#">PRIVACY POLICY</a>
+<a class="font-['Noto_Serif'] uppercase tracking-widest text-[10px] text-white/50 hover:text-white transition-colors duration-300" href="#">TERMS OF SERVICE</a>
+<a class="font-['Noto_Serif'] uppercase tracking-widest text-[10px] text-white/50 hover:text-white transition-colors duration-300" href="#">SHIPPING &amp; RETURNS</a>
+<a class="font-['Noto_Serif'] uppercase tracking-widest text-[10px] text-white/50 hover:text-white transition-colors duration-300" href="#">CONTACT</a>
+</div>
+</div>
+</footer>
+<div id="mobile-menu" class="fixed top-0 left-0 w-full h-full bg-[#121212] z-50 transform translate-x-full transition-all duration-300 md:hidden flex flex-col items-center justify-center opacity-100">
+<button id="close-menu" class="absolute top-8 right-8 material-symbols-outlined text-white hover:text-[#D4AF37] transition-colors">close</button>
+<nav class="flex flex-col gap-8 text-center">
+<a class="font-['Noto_Serif'] uppercase tracking-[0.2em] text-lg text-[#D4AF37] border-b border-[#D4AF37] pb-1 hover:text-[#D4AF37] transition-all duration-500 ease-in-out" href="#product-catalog" onclick="closeMenu()">SHOP</a>
+<a class="font-['Noto_Serif'] uppercase tracking-[0.2em] text-lg text-white/70 hover:text-[#D4AF37] transition-all duration-500 ease-in-out" href="#gift-vault" onclick="closeMenu()">GIFT VAULT</a>
+<a class="font-['Noto_Serif'] uppercase tracking-[0.2em] text-lg text-white/70 hover:text-[#D4AF37] transition-all duration-500 ease-in-out" href="#wonder-experience" onclick="closeMenu()">EXPERIENCE</a>
+<a class="font-['Noto_Serif'] uppercase tracking-[0.2em] text-lg text-white/70 hover:text-[#D4AF37] transition-all duration-500 ease-in-out" href="#concierge" onclick="closeMenu()">CONCIERGE</a>
+</nav>
+</div>
+<script>
+function toggleMenu() {
+  const menu = document.getElementById('mobile-menu');
+  menu.classList.toggle('translate-x-full');
+  menu.classList.toggle('translate-x-0');
+  if (menu.classList.contains('translate-x-0')) {
+    menu.classList.remove('opacity-0');
+    menu.classList.add('opacity-100');
+  }
+}
+function closeMenu() {
+  const menu = document.getElementById('mobile-menu');
+  menu.classList.add('opacity-0');
+  setTimeout(() => {
+    menu.classList.add('translate-x-full');
+    menu.classList.remove('translate-x-0');
+  }, 300);
+}
+document.getElementById('hamburger').addEventListener('click', toggleMenu);
+document.getElementById('close-menu').addEventListener('click', closeMenu);
+window.addEventListener('scroll', () => {
+  const button = document.getElementById('back-to-top');
+  if (window.scrollY > 300) {
+    button.classList.remove('opacity-0', 'pointer-events-none', 'scale-0');
+    button.classList.add('opacity-100', 'pointer-events-auto', 'scale-100');
+  } else {
+    button.classList.remove('opacity-100', 'pointer-events-auto', 'scale-100');
+    button.classList.add('opacity-0', 'pointer-events-none', 'scale-0');
+  }
+
+  // Scroll Progress Bar
+  const progressBar = document.getElementById('scroll-progress-bar');
+  const scrollTop = window.scrollY || document.documentElement.scrollTop;
+  const docHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+  const scrolled = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+  progressBar.style.width = scrolled + '%';
+});
+// Scroll-triggered animations
+const observerOptions = {
+  threshold: 0.1,
+  rootMargin: '0px 0px -50px 0px'
+};
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.remove('opacity-0', 'translate-y-10');
+      entry.target.classList.add('opacity-100', 'translate-y-0');
+    }
+  });
+}, observerOptions);
+// Observe all sections
+document.querySelectorAll('section').forEach(section => {
+  observer.observe(section);
+});
+</script>
+<a id="back-to-top" href="#hero" class="fixed bottom-8 right-8 bg-primary text-on-primary p-4 rounded-full shadow-lg hover:bg-primary/80 transition-all duration-1000 ease-in-out opacity-0 pointer-events-none scale-0 flex items-center justify-center" style="z-index: 60;">
+<span class="material-symbols-outlined">arrow_upward</span>
+</a>
+</body></html>
