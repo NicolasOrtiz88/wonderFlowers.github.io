@@ -1,6 +1,6 @@
 # Wonder Flowers 🇪🇸🌹
 
-[![wonder1.html preview](https://img.shields.io/badge/Live%20Demo-wonder1.html-brightgold?style=for-the-badge&logo=html5)](wonder1.html)
+[![Live Demo index.html](https://img.shields.io/badge/Live%20Demo-index.html-brightgold?style=for-the-badge&logo=html5)](index.html)
 
 ## ✨ Sobre el Proyecto
 
@@ -19,11 +19,9 @@
 
 | Archivo | Descripción | 
 |---------|-------------|
-| `wonder1.html` | **Versión Principal** - Scroll snapping, animations, full features |
-| `index.html` | **Versión Básica** - Estructura core + smooth scroll synced |
-| `TODO.md` | Plan de desarrollo completado |
+| `index.html` | **Demo Principal** - Scroll suave, animaciones, todas las features |\n| `TODO.md` | Plan de desarrollo completado |\n| `README.md` | Documentación del proyecto |
 
-**Ver Demo**: Abrir `wonder1.html` en browser
+**Ver Demo**: Abrir `index.html` en browser (Live Server recomendado)
 
 ## 🎨 Diseño & Features Técnicas
 
@@ -45,13 +43,7 @@
 
 ## 📂 Estructura del Proyecto
 
-```
-wonder-flowers/
-├── wonder1.html     # ⭐ Main demo (full features)
-├── index.html       # Basic version
-├── TODO.md          # Development log
-└── README.md        # Este archivo
-```
+```\nwonderFlowers.github.io/\n├── index.html       # ⭐ Demo principal (todas features)\n├── TODO.md          # Log de desarrollo\n└── README.md        # Este archivo\n```
 
 ## 🛠️ Tecnologías
 
@@ -80,16 +72,13 @@ git init
 git add .
 git commit -m "Initial Wonder Flowers deploy"
 git branch -M main
-git remote add origin [TU_REPO]
+git remote add origin https://github.com/[TU-USUARIO]/wonderFlowers.github.io.git
 git push -u origin main
 ```
 
 **Live en 2 mins** 🚀
 
-### VSCode Live Server
-```
-Right-click wonder1.html → "Open with Live Server"
-```
+### VSCode Live Server\n```\nRight-click index.html → "Open with Live Server"\n```
 
 ## 📱 Responsive Breakpoints
 
